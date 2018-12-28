@@ -6,7 +6,7 @@ const ejs = require('ejs');
 const template = './views/emailTemplate.ejs';
 
 
-exports.sendMail = (to, subject, link, user)=>{
+exports.sendMail = (to, subject, hre, link, user)=>{
 
     let transporter = nodemailer.createTransport({
         service: 'gmail',
@@ -20,6 +20,7 @@ exports.sendMail = (to, subject, link, user)=>{
         name: '<Apil>',
         link: link,
         id: user,
+        hre: hre,
         title:'EMail Verification Page',
         body:'This is unharmful image'
     };
