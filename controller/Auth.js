@@ -47,7 +47,7 @@ exports.registerPost = async (req, res, next)=>{
         let code = uuid;
         console.log(uuid);
         req.session.code = code;
-        req.session.user = info;
+       
         
         
         email.sendMail(info.email, 'set new pass',req.hostname, code, info._id);

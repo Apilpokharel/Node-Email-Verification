@@ -16,6 +16,6 @@ exports.register  = (req, res)=>{
 
 exports.setNewPass = (req, res)=>{
 
-    res.render('setNewPass');
+    res.render('setNewPass',{id: req.session.user._id});
     
 };

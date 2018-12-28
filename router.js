@@ -35,7 +35,7 @@ router.get('/delete/:id', async function(req, res, next){
        if(!user){
          res.json('error deleting account');
        } else{
-         res.redirect('/verificationPage');
+         res.redirect('/register');
        }
     }
 });

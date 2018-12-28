@@ -13,7 +13,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </head>
 <body>
-  <form action="/setNewPass" method="post">
+  <form action="/setNewPass" method="post" class="container">
 <div class="form-group">
 <input name="password" class="form-control" type="text" placeholder="New Password">
 </div>
@@ -27,5 +27,7 @@
         </div>
 
 </form>  
+
+<a href="/delete/<%= id %>">Wrong email Delete This Account</a>
 </body>
 </html>
