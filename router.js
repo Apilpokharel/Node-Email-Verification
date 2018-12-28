@@ -35,6 +35,7 @@ router.get('/delete/:id', async function(req, res, next){
        if(!user){
          res.json('error deleting account');
        } else{
+         req.session.user = null;
          res.redirect('/register');
        }
     }
