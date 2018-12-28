@@ -1,7 +1,7 @@
 'use strict';
 const User = require('../schema/UserSchema');
 var os = require("os");
-var hostname = os.hostname();
+var hostname = os.hostname() || 'heroku';
 
 exports.login = (req, res)=>{
 
