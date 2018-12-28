@@ -125,9 +125,9 @@ exports.AuthorizeLogin = async (req, res, next)=>{
 
 exports.AuthorizeSetNewPass = async (req, res, next)=>{
 
-    if(req.session.setpass == "lala"){
+    
     const user = await User.findBySession(req);
-    if(!user || (user === null)){
+    if(user === null){
         console.log('user session is', req.session.user);
         res.redirect('/login');
     } else{
@@ -136,9 +136,7 @@ exports.AuthorizeSetNewPass = async (req, res, next)=>{
         next();
         
     }
-}else{
-    res.redirect('back');
-};
+
 
 };
 

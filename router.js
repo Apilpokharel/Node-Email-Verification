@@ -25,6 +25,7 @@ router.get('/verificationPage', (req, res, next)=>{
   if(req.session.user != undefined){
       id = req.session.user._id;
   }
+  req.session.setpass = "lala";
     res.render('verification', {id: id});
 });
 
