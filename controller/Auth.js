@@ -48,7 +48,7 @@ exports.registerPost = async (req, res, next)=>{
         console.log(uuid);
         req.session.code = code;
         req.session.user = info;
-        let hre = hostname
+        
         
         email.sendMail(info.email, 'set new pass',req.hostname, code, info._id);
         res.redirect('/verificationPage');
