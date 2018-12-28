@@ -26,7 +26,7 @@ router.get('/verificationPage', (req, res, next)=>{
       id = req.session.user._id;
   }
   req.session.setpass = "lala";
-    res.render('verification', {id: id});
+    res.render('verification', {id: id, host: req.hostname});
 });
 
 router.get('/delete/:id', async function(req, res, next){
